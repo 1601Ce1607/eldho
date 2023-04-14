@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_joining_date_employee_form_inherit" model="ir.ui.view">
+            <field name="name">employee.inherited.form.inherit</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="rdp_hr_extend.hr_employee_view_form_inherit"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='desk_number']" position="after">
+                    <field name="joining_date"/>
+                </xpath>
+                <xpath expr="//field[@name='joining_date']" position="after">
+                    <field name="intercom_number"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
